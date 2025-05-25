@@ -1,0 +1,33 @@
+＜＜＜ツール＞＞＞
+
+
+〇chap04 p142-
+・配列	
+①	int[]	scores = new int[5];
+	scores[0] = 1;
+	scores[1] = 2;
+	scores[2] = 3;
+	scores[3] = 4;
+	scores[4] = 10;
+	
+
+②	int[]	scores = new int[] {1, 2, 3, 4, 10};
+
+③	int[]	scores = {1, 2, 3, 4, 10};
+
+・配列の長さ取得
+	int len = scores.length;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

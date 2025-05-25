@@ -1,3 +1,5 @@
+package chap03;
+
 /*3-1
 weight == 60
 60 < (age1 + age2) * 2
@@ -33,7 +35,7 @@ public class Main {
 //3-4 {}
 //3-5
 
-package chap03;
+
 
 public class Main {
 
@@ -60,7 +62,6 @@ public class Main {
 */
 //3-6
 
-package chap03;
 
 public class Main {
 
