@@ -1,0 +1,32 @@
+package chap09;
+
+public class Monster {
+	
+	//属性　フィールド
+	String name;
+	int hp;
+	
+	//操作　メソッド
+	public void Attack() {
+		System.out.println(this.name + "は、攻撃した");
+	}
+	
+	
+	//コンストラクタ 宣言時に1回実行
+	public Monster(String name, int hp) {
+		this.name = name;
+		this.hp = hp;
+		System.out.println(this.name + "が、現れた。HPは" + this.hp);
+	}
+	public Monster(String name) {
+		this(name, 100);
+	}
+	public Monster(int hp) {
+		this("汎用兵器", hp);
+	}
+	public Monster() {
+		this("汎用兵器", 100);
+	}
+	
+	
+}
