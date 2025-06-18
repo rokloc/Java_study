@@ -20,6 +20,14 @@ public class Main {
 		//文字列置き換え　replace(String before, String after)
 		s1 = "HelloWorld";
 		System.out.println(s1.replace("World", "Nippon"));
+		
+		//文字列連結p531
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < 10000; i++) {
+			sb.append("Java");
+		}
+		//StringBuilder内部にtoStringオーバーライドが記述されている
+		System.out.println(sb.toString());
 	}
 
 }
