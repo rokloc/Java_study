@@ -1,10 +1,12 @@
 package chap15;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 		
 		//文字列変換p530
 		//大文字を小文字　toLowerCase()
@@ -96,14 +98,33 @@ public class Main {
 		//形式1　long型の数値
 		
 		//形式2  Date型のインスタンスjava.util.Dateクラス	最も利用されている
-		Date d = new Date();
-		System.out.println(d.toString());
-		System.out.println(d);
-		System.out.println(d.getTime());
+		Date d1 = new Date();
+		System.out.println(d1.toString());//下と同じ　Dateクラス内でtoStringがオーバーライドされているため
+		System.out.println(d1);
+		System.out.println(d1.getTime());
+		Date d2 = new Date();
+		System.out.println(d2.getTime() - d1.getTime());
 		
+		//Calenderクラス(抽象クラス)
+		Calendar c  = Calendar.getInstance();
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH);
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		int hour = c.get(Calendar.HOUR);
+		int minute = c.get(Calendar.MINUTE);
+		int second = c.get(Calendar.SECOND);
+		System.out.println(year + "年" + month + "月" + day + "日" + hour + "時" + minute + "分" + second + "秒");
 		
+		//フォーマット
+		SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		
+		Date d3 = f.parse("2023/09/18 05:53:20");
+		System.out.println(d3);
+		Date now = new Date();
+		String fs = f.format(now);
+		System.out.println(fs);
 		
+		//DateクラスやCalendarクラスは機能的に使用があまり推奨されていない
 		
 		
 		
